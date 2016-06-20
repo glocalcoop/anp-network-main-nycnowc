@@ -2254,6 +2254,9 @@ a {
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
+.blog #content {
+  background-color: #eaede8; }
+
 .posts-list .entries-list {
   transition: all .2s ease-in-out;
   margin-top: 1em;
@@ -2261,9 +2264,15 @@ a {
   .posts-list .entries-list .entry {
     padding: 1em;
     background-color: #fff;
-    text-align: center; }
+    text-align: center;
+    transition: transform .2s ease-in-out;
+    border: none; }
     .posts-list .entries-list .entry:hover, .posts-list .entries-list .entry:focus {
       transform: translate3d(0, -4px, 0); }
+    .posts-list .entries-list .entry a {
+      padding: .25em 0; }
+      .posts-list .entries-list .entry a:hover, .posts-list .entries-list .entry a:focus {
+        padding: .25em 0; }
   .posts-list .entries-list .entry-meta {
     padding-bottom: .5em;
     text-transform: uppercase;
@@ -2394,11 +2403,19 @@ a {
     padding: 1em;
     background-color: #fff;
     text-align: center;
-    border: none; }
+    border: none;
+    transition: transform .2s ease-in-out; }
     .home .home-widgets .post-list li:hover, .home .home-widgets .post-list li:focus,
     .page-home .home-widgets .post-list li:hover,
     .page-home .home-widgets .post-list li:focus {
       transform: translate3d(0, -4px, 0); }
+    .home .home-widgets .post-list li a,
+    .page-home .home-widgets .post-list li a {
+      padding: .25em 0; }
+      .home .home-widgets .post-list li a:hover, .home .home-widgets .post-list li a:focus,
+      .page-home .home-widgets .post-list li a:hover,
+      .page-home .home-widgets .post-list li a:focus {
+        padding: .25em 0; }
   .home .home-widgets .post-list .entry-title,
   .page-home .home-widgets .post-list .entry-title {
     margin: 0;
