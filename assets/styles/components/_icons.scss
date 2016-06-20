@@ -1,0 +1,41 @@
+.icon {
+    color: $color__white;
+    @include font-size($h4);
+}
+
+.facebook .icon {
+    @include icon-font(facebook, before);
+}
+
+.twitter .icon {
+    @include icon-font(twitter, before);
+}
+
+.instagram .icon {
+    @include icon-font(instagram, before);
+}
+
+.feed .icon,
+.rss .icon {
+    @include icon-font(feed, before);
+}
+
+.linkedin .icon {
+    @include icon-font(linkedin, before);
+}
+
+.pinterest .icon {
+    @include icon-font(pinterest, before);
+}
+
+.tumblr .icon {
+    @include icon-font(tumblr, before);
+}
+
+.youtube .icon {
+    @include icon-font(youtube, before);
+}
+
+.email .icon {
+    @include icon-font(envelope, before);
+}

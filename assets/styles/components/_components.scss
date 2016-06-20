@@ -13,7 +13,7 @@ input[type="password"],
 input[type="search"],
 textarea {
 
-	&:focus {}
+    &:focus {}
 }
 
 input[type="text"],
@@ -23,3 +23,10 @@ input[type="password"],
 input[type="search"] {}
 
 textarea {}
+
+.contact-info {
+    p {
+        @include font-size($smaller);
+        line-height: 2;
+    }
+}
