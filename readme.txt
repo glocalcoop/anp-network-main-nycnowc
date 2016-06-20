@@ -29,7 +29,7 @@ Activist Network NYC NOWC Theme includes support for Jetpack's Infinite Scroll a
 
 == Changelog ==
 
-= 1.0.1 June 16, 2016 =
+= 1.0.1 June 20, 2016 =
 * Added core SASS variables
 * Added core styles
 * Added individual stylesheets for pages

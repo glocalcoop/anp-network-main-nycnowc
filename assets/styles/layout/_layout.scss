@@ -34,6 +34,19 @@ body {}
 }
 
 /**
+ * Content Columns
+ */
+ .layout-full {
+    #primary {}
+    #secondary {
+        width: 0;
+        display: none;
+    }
+}    
+
+@include breakpoint(md) {}
+
+/**
  * Footer
  */
 #colophon {
