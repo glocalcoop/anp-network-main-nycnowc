@@ -107,8 +107,28 @@
 }
 
 %fullwidth { 
-  margin: 0 -9999rem;
-  /* add back negative margin value */
-  padding: 0.25rem 9999rem;
-  background: rgba(0, 0, 0, 0.5);
+  margin-left: $element__width-offset;
+  margin-right: $element__width-offset;
+}
+
+%fullwidth-header {
+  @extend %fullwidth;
+  padding: 2.5em;
+  background-color: $color__black;
+  color: $color__white;
+
+  h1 {
+      margin: 0;
+      padding: 0;
+      @include font-size($h2);
+      font-weight: bold;
+      text-align: center;
+  }
+
+  .entry-meta {
+      color: $color__white;
+      a {
+           color: $color__white;
+      }
+  }
 }
