@@ -30,11 +30,21 @@
         }
 
         h1 {
-            margin: 0;
-            padding: 1.5em;
-            @include font-size($h2);
+            width: $size__site-main;
+            max-width: $size__max-width;
+            margin: 0 auto;
+            padding-bottom: .5em;
+            @include font-size($h1);
             font-weight: bold;
             text-align: center;
+        }
+
+        .entry-meta {
+            padding-bottom: 3.5em;
+            color: $color__white;
+            a {
+                 color: $color__white;
+            }
         }
 
     } 
