@@ -2723,7 +2723,7 @@ body {
     font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   body a {
     color: #a6c299; }
-    body a:hover, body a:focus {
+    body a:hover, body a:focus, body a:visited {
       color: #8aaf79; }
 
 #masthead .main-navigation {

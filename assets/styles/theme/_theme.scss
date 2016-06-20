@@ -19,7 +19,8 @@ body {
         color: $color__link;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:visited {
             color: $color__link-hover;
         }
     }
