@@ -2721,6 +2721,10 @@ body {
   body h2,
   body h3 {
     font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  body a {
+    color: #a6c299; }
+    body a:hover, body a:focus {
+      color: #8aaf79; }
 
 #masthead .main-navigation {
   text-transform: uppercase;
