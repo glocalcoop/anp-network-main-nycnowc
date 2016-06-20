@@ -2705,6 +2705,8 @@ body {
 
 #colophon {
   margin-top: 0; }
+  #colophon .widget h3 {
+    color: #fff; }
   #colophon .bottom-navigation,
   #colophon .footer-widgets,
   #colophon .copyright {
