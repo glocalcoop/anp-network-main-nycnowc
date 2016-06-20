@@ -68,3 +68,39 @@ time.updated {}
 		blockquote:not(.alignleft):not(.alignright) {}
 	}
 }
+
+.wp-caption-text {
+	@include font-size($smaller);
+}
+
+.main-image {
+	margin-right: 0;
+	margin-left: 0;
+	.wp-caption-text {
+		text-align: left;
+	}
+}
+
+.alignleft {
+	margin-left: 0;
+	.wp-caption-text {
+		text-align: left;
+	}
+}
+.aligncenter {
+	.wp-caption-text {
+		text-align: center;
+	}
+}
+.alignright {
+	margin-right: 0;
+	.wp-caption-text {
+		text-align: right;
+	}
+}
+
+.widget {
+	.entry-meta {
+		font-style: normal;
+	}
+}

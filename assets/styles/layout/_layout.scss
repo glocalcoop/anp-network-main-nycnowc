@@ -32,3 +32,32 @@ body {}
 .site-content-container {
     max-width: 950px;
 }
+
+/**
+ * Footer
+ */
+#colophon {
+    @extend %grid;
+}
+
+@include breakpoint(md) {
+    
+    #colophon {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .bottom-navigation,
+        .footer-widgets {
+            @include flex-grid-cols(2);
+            padding-top: 1.5em;
+        }
+        .footer-menu {
+            text-align: right;
+        }
+
+        .widget .wrap {
+            padding-top: 0;
+        }
+    }
+
+}

@@ -1,4 +1,9 @@
-.home {
+.home,
+.page-home {
+
+    #content {
+        background-color: $color__background-panel;
+    }
 
     &.singular-page .entry-header {
         display: block;
@@ -10,8 +15,6 @@
         margin-left: $element__width-offset;
         background-size: cover;
         background-position: center center;
-
-        
     }
 
     .entry.intro-content {
@@ -36,9 +39,137 @@
         .siteorigin-widget-tinymce > p {
             margin-top: 0;
         }
+        .widget-title {
+            @include font-size($h4);
+            text-transform: none;
+        }
+        .category,
+        .tags {
+            @include screen-reader-text;
+        }
     }
 
     #colophon {
         margin-top: 0;
+    }
+
+}
+
+
+.home,
+.page-home {
+    .intro-content .entry-content {
+        @extend %grid;
+        align-items: center;
+        justify-content: center;
+
+        .intro-text,
+        .intro-video {
+            @extend %grid-col;
+        }
+
+        .intro-video {
+            border-radius: 25%;
+            padding: 3em 0;
+            text-align: center;
+            background-color: rgba($color__black,.3);
+        }
+    }
+
+    .home-widgets {
+        .post-list {
+            transition: all .2s ease-in-out;
+            margin-top: 1em;
+            @extend %grid;
+            justify-content: space-between;
+
+            li {
+                @extend %grid-col;
+                padding: 1em;
+                background-color: $color__white;
+                text-align: center;
+                border: none;
+
+                &:hover,
+                &:focus {
+                    transform: translate3d(0, -4px, 0);
+                }
+            }
+
+            .entry-title {
+                margin: 0;
+                @include font-size($h6);
+                font-family: $font__main;
+            }
+
+            .entry-meta {
+                padding-bottom: .5em;
+                text-transform: uppercase;
+                font-family: $font__heading;
+                color: $color__black;
+                @include font-size($smaller);
+            }
+        }
+    }
+}
+
+@include breakpoint(md) {
+    .home,
+    .page-home {
+        .intro-content .entry-content {
+            padding: .5em;
+            .intro-text {
+                flex: 0 0 75%;
+            }
+            .intro-video {
+                flex: 0 0 25%;
+            }
+        }
+        .home-widgets {
+            &.per-row-1,
+            &.per-row-2,
+            &.per-row-2 {
+                .widget {
+                    width: 100%;
+                }
+            }
+
+            .post-list {
+                li {
+                    @include flex-grid-cols(2);
+                }
+            }
+        }
+    }
+}
+
+@include breakpoint(lg) {
+    .home,
+    .page-home {
+        .home-widgets {
+            .post-list {
+                li {
+                    @include flex-grid-cols(3);
+                }
+            }
+
+        }
+    }
+}
+
+
+.link-video-modal {
+    color: $color__white;
+    @include font-size($h2);
+    @include icon-font(play, before);
+    &:after {
+        content: 'Watch the Video';
+        display: block;
+        @include font-size($h6);
+    }
+
+    &:hover,
+    &:focus {
+        color: $color__white;
     }
 }

@@ -10,3 +10,13 @@
 .entry-content blockquote:not(.alignleft):not(.alignright) {
     margin: 1em 1em 1em 2em;
 }
+
+.widget {
+    .entry-meta {
+        .post-date {
+            &:after {
+                content: none !important;
+            }
+        }
+    }
+}
