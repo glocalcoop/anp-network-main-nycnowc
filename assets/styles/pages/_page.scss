@@ -1,0 +1,41 @@
+.site-main {
+    
+
+    &> header {
+        margin-left: $element__width-offset;
+        margin-right: $element__width-offset;
+        background-color: $color__black;
+        color: $color__white;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 1.5em;
+        @include font-size($h2);
+        font-weight: bold;
+        text-align: center;
+    }
+
+}
+
+.singular {
+
+   .site-main {
+    
+        header {
+            margin-left: $element__width-offset;
+            margin-right: $element__width-offset;
+            background-color: $color__black;
+            color: $color__white;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 1.5em;
+            @include font-size($h2);
+            font-weight: bold;
+            text-align: center;
+        }
+
+    } 
+}

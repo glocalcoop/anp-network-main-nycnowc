@@ -2,12 +2,196 @@
  THEME - Default
 ******************************************************************/
 
+body {
+    font-family: $font__main;
+    p,
+    li,
+    .site-main {
+        font-family: $font__main;
+    }
+    h1,
+    h2,
+    h3 {
+        font-family: $font__heading;
+    }
+}
+
+#masthead {
+    .main-navigation {
+        text-transform: uppercase;
+        border-top: none;
+        li {
+            @include font-size($smaller);
+            font-family: $font__bold;
+        }
+
+        ul {
+            a {
+                &:hover,
+                &:focus {
+                    background-color: $color__transparent;
+                    color: darken($color__link,20%);
+                }
+            }
+        }
+
+    }
+    .menu-toggle {
+        background-color: $color__transparent;
+        border: none;
+        color: $color__link;
+        text-transform: uppercase;
+    }
+
+    .site-branding {
+        .custom-logo-link {
+            .custom-logo {
+                width: 100%;
+                max-width: 170px;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@include breakpoint(md) {
+    #masthead {
+        .main-navigation {
+            li {
+                padding: 0 ($element__spacer * 4);
+            }
+        }
+    }
+}
+
+.site-header {
+    .site-branding {}
+    .main-navigation {}
+
+}
+
+@include breakpoint(md) {
+    .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .site-branding {}
+        .main-navigation {
+            width: 100%;
+        }
+
+        .header-menu {
+            float: right;
+        }
+    }
+}
+
+#content {
+    padding-bottom: 1em;
+    background-color: $color__background-panel;
+}
+
+.site-content {
+    margin-top: 0;
+}
+
+#colophon {
+    margin-top: 0;
+
+    .bottom-navigation,
+    .footer-widgets,
+    .copyright {
+        background-color: $color__transparent;
+        color: $color__white;
+
+        a {
+            color: $color__white;
+        }
+    }
+    .footer-widgets .wrap {
+        background-color: $color__transparent;
+    }
+    .bottom-navigation {}
+    .footer-widgets {}
+    .copyright {}
+}
+
+.site-footer {
+    background-color: $color__background-footer;
+}
 
 .post {
     .meta {}
 }
 
 .page-title {}
+
+#secondary {
+    display: none;
+}
+
+.posts-list {
+    .entries-list {
+        transition: all .2s ease-in-out;
+        margin-top: 1em;
+        @extend %grid;
+        justify-content: space-between;
+
+        .entry {
+            @extend %grid-col;
+            padding: 1em;
+            background-color: $color__white;
+            text-align: center;
+
+            &:hover,
+            &:focus {
+                transform: translate3d(0, -4px, 0);
+            }
+        }
+
+        .entry-meta {
+            padding-bottom: .5em;
+            text-transform: uppercase;
+            font-family: $font__heading;
+            color: $color__black;
+            @include font-size($smaller);
+        }
+        .entry-content {}
+        .entry-footer {}
+        .entry-title {
+            margin: 0;
+            @include font-size($h6);
+            font-family: $font__main;
+        }
+    }
+}
+
+@include breakpoint(md) {
+    
+    .posts-list {
+        .entries-list {
+            .entry {
+                @include flex-grid-cols(2);
+            }
+        }
+    }
+
+}
+
+@include breakpoint(lg) {
+    
+    .posts-list {
+        .entries-list {
+            .entry {
+                @include flex-grid-cols(3);
+            }
+        }
+    }
+
+}
+
+
 
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */

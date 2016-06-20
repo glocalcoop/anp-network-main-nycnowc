@@ -20,18 +20,31 @@
   }
 }
 
+@mixin flex-grid-cols($cols, $margin: .25em) {
+
+  @if $cols == 2 {
+    flex: 0 0 calc(50% - (#{$margin} * 2));
+  }
+  @if $cols == 3 {
+    flex: 0 0 calc(33% - (#{$margin} * 2));
+  }
+  @if $cols == 4 {
+    flex: 0 0 calc(25% - (#{$margin} * 2));
+  }
+}
+
 
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Clearfix
@@ -46,7 +59,7 @@
 
 // Clear after (not all clearfix need this also)
 @mixin clearfix-after() {
-	clear: both;
+  clear: both;
 }
 
 /**
@@ -97,7 +110,7 @@
 /**
  * Navigation
  */
-@mixin tab-nav($color: $white, $color__background-body: $color__default, $active-color: $white, $active-bg-color: $color__primary, $border-color: rgba(0,0,0,.1)) {
+@mixin tab-nav($color: $color__white, $color__background-body: $color__default, $active-color: $color__white, $active-bg-color: $color__primary, $border-color: rgba(0,0,0,.1)) {
   ul {
     @include inline-list();
     width: 100%;
@@ -129,7 +142,7 @@
   
 }
 
-@mixin flex-tab-nav($color: $white, $bg-color: $color__default, $active-color: $white, $active-bg-color: $color__primary, $border-color: rgba(0,0,0,.1), $direction: row, $wrap: wrap, $align: space-between) {
+@mixin flex-tab-nav($color: $color__white, $bg-color: $color__default, $active-color: $color__white, $active-bg-color: $color__primary, $border-color: rgba(0,0,0,.1), $direction: row, $wrap: wrap, $align: space-between) {
   ul {
     @include inline-flex-list($direction, $wrap, $align);
     li {
@@ -185,7 +198,7 @@
 /**
  * Buttons
  */
-@mixin button($font-size: $small, $color: $white, $bg-color: $color__default) {
+@mixin button($font-size: $small, $color: $color__white, $bg-color: $color__default) {
 
   transition: all 0.25s ease;
   @include font-size($font-size);
@@ -266,7 +279,7 @@
 }
 
 
-@mixin button-icon($icon: cog, $color: $white, $background-color: $color__default) {
+@mixin button-icon($icon: cog, $color: $color__white, $background-color: $color__default) {
   @include button($color: $color, $color__background-body: $background-color);
   
   &:before {
@@ -289,7 +302,7 @@
   }
 }
 
-@mixin badge($color: $white, $bgcolor: $color__default, $font-size: $tiny) {
+@mixin badge($color: $color__white, $bgcolor: $color__default, $font-size: $tiny) {
   @include font-size($font-size);
   background-color: $bgcolor;
   border-radius: 10px;
@@ -406,7 +419,7 @@
 //
 // Creates two color stops, start and end, by specifying a color and position for each color stop.
 // Color stops are not available in IE9 and below.
-@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+@mixin gradient-vertical($start-color: $color__light-grey, $end-color: $color__dark-grey, $start-percent: 0%, $end-percent: 100%) {
   background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
   background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
   background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
@@ -414,27 +427,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
 }
 
-@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+@mixin gradient-directional($start-color: $color__light-grey, $end-color: $color__dark-grey, $deg: 45deg) {
   background-repeat: repeat-x;
   background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
   background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
   background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
 }
-@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
-  background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
-  background-image: -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
-  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
-}
-@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
-  background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
-  background-image: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
-  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
-  background-repeat: no-repeat;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
-}
-@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+
+@mixin gradient-radial($inner-color: $color__light-grey, $outer-color: $color__dark-grey) {
   background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
   background-image: radial-gradient(circle, $inner-color, $outer-color);
   background-repeat: no-repeat;

@@ -1,10 +1,10 @@
 /*
-Theme Name: Activist Network NYC NOWC Theme
+Theme Name: New York City Network of Worker Cooperatives
 Theme URI: https://github.com/glocalcoop/anp-network-main-nycnowc
 Author: Pea, Glocal
 Author URI: http://glocal.coop
-Description: Child theme starter for ANP main network site
-Version: 1.0.0
+Description: Custom child theme for ANP main network site
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: anp-network-main-nycnowc
@@ -18,6 +18,31 @@ Tags:
 /**
  * Color variables
  */
+/**
+ * Uncomment and change as desired.
+ */
+/**
+ * Can be replaced with another color palette
+ * See: theme directory for sample palettes
+ */
+/* Social Media - http://www.paulund.co.uk/social-media-colours */
+/**
+ * Fonts
+ */
+@font-face {
+  font-family: 'Gotham Book';
+  src: url("assets/fonts/Gotham-Book.eot");
+  src: url("assets/fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Gotham-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url("assets/fonts/Gotham-Bold.eot");
+  src: url("assets/fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("assets/fonts/Gotham-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
 /**
  * Elements
  */
@@ -47,22 +72,99 @@ Tags:
   display: table;
   clear: both; }
 
+.posts-list .entries-list {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap; }
+
+.posts-list .entries-list .entry {
+  flex: 0 0 100%; }
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
 a {
-  color: #509EA3; }
+  color: #a6c299; }
   a:hover, a:focus {
-    color: #2e5c5f; }
+    color: #8aaf79; }
   a:visited {
-    color: #2e5c5f; }
+    color: #a6c299; }
 
 /*--------------------------------------------------------------
 # Structure
 --------------------------------------------------------------*/
+/**
+ * Containers
+ */
+.site-content-container,
+.site-branding-container,
+.main-navigation-container,
+.footer-menu-container,
+.footer-widget-container,
+.site-info-container {
+  width: 100%; }
+
+.site-content-container {
+  max-width: 950px; }
+
 /*--------------------------------------------------------------
 # Pages
 --------------------------------------------------------------*/
+.site-main > header {
+  margin-left: calc(-1 * (100vw - 100%)/2);
+  margin-right: calc(-1 * (100vw - 100%)/2);
+  background-color: #000;
+  color: #fff; }
+
+.site-main h1 {
+  margin: 0;
+  padding: 1.5em;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center; }
+
+.singular .site-main header {
+  margin-left: calc(-1 * (100vw - 100%)/2);
+  margin-right: calc(-1 * (100vw - 100%)/2);
+  background-color: #000;
+  color: #fff; }
+
+.singular .site-main h1 {
+  margin: 0;
+  padding: 1.5em;
+  font-size: 36px;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center; }
+
+.home .intro-content {
+  margin-right: calc(-1 * (100vw - 100%)/2);
+  margin-left: calc(-1 * (100vw - 100%)/2);
+  background-size: cover;
+  background-position: center center; }
+
+.home .entry.intro-content {
+  border-top-color: transparent;
+  border-top-width: 1px; }
+  .home .entry.intro-content p {
+    font-size: 16px;
+    font-size: 1rem; }
+
+.home .entry-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #fff; }
+
+.home .home-widgets .siteorigin-widget-tinymce > p {
+  margin-top: 0; }
+
+.home #colophon {
+  margin-top: 0; }
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -78,6 +180,111 @@ a {
 /******************************************************************
  THEME - Default
 ******************************************************************/
+body {
+  font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  body p,
+  body li,
+  body .site-main {
+    font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  body h1,
+  body h2,
+  body h3 {
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+#masthead .main-navigation {
+  text-transform: uppercase;
+  border-top: none; }
+  #masthead .main-navigation li {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #masthead .main-navigation ul a:hover, #masthead .main-navigation ul a:focus {
+    background-color: transparent;
+    color: #6f995c; }
+
+#masthead .menu-toggle {
+  background-color: transparent;
+  border: none;
+  color: #a6c299;
+  text-transform: uppercase; }
+
+#masthead .site-branding .custom-logo-link .custom-logo {
+  width: 100%;
+  max-width: 170px;
+  height: auto; }
+
+@media screen and (min-width: 768px) {
+  #masthead .main-navigation li {
+    padding: 0 20px; } }
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .site-header .main-navigation {
+      width: 100%; }
+    .site-header .header-menu {
+      float: right; } }
+
+#content {
+  padding-bottom: 1em;
+  background-color: #eaede8; }
+
+.site-content {
+  margin-top: 0; }
+
+#colophon {
+  margin-top: 0; }
+  #colophon .bottom-navigation,
+  #colophon .footer-widgets,
+  #colophon .copyright {
+    background-color: transparent;
+    color: #fff; }
+    #colophon .bottom-navigation a,
+    #colophon .footer-widgets a,
+    #colophon .copyright a {
+      color: #fff; }
+  #colophon .footer-widgets .wrap {
+    background-color: transparent; }
+
+.site-footer {
+  background-color: #000; }
+
+#secondary {
+  display: none; }
+
+.posts-list .entries-list {
+  transition: all .2s ease-in-out;
+  margin-top: 1em;
+  justify-content: space-between; }
+  .posts-list .entries-list .entry {
+    padding: 1em;
+    background-color: #fff;
+    text-align: center; }
+    .posts-list .entries-list .entry:hover, .posts-list .entries-list .entry:focus {
+      transform: translate3d(0, -4px, 0); }
+  .posts-list .entries-list .entry-meta {
+    padding-bottom: .5em;
+    text-transform: uppercase;
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-size: 0.75rem; }
+  .posts-list .entries-list .entry-title {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+@media screen and (min-width: 768px) {
+  .posts-list .entries-list .entry {
+    flex: 0 0 calc(50% - (0.25em * 2)); } }
+
+@media screen and (min-width: 992px) {
+  .posts-list .entries-list .entry {
+    flex: 0 0 calc(33% - (0.25em * 2)); } }
+
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
 /* blog template page */
@@ -120,3 +327,8 @@ a {
  * Stylesheet reserved just for your hacky code
  * http://csswizardry.com/2013/04/shame-css/
  */
+.layout-2c-r:not(.page-template-template-front) #primary {
+  width: 100%; }
+
+.entry-content blockquote:not(.alignleft):not(.alignright) {
+  margin: 1em 1em 1em 2em; }

@@ -1,0 +1,39 @@
+.home {
+
+    .intro-content {
+        margin-right: $element__width-offset;
+        margin-left: $element__width-offset;
+        background-size: cover;
+        background-position: center center;
+
+        
+    }
+
+    .entry.intro-content {
+        border-top-color: $color__transparent;
+        border-top-width: 1px; 
+        p {
+            @include font-size($h6);
+        }
+    }
+
+    .entry-content {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
+        color: $color__white;
+
+    }
+
+    .home-widgets {
+        .siteorigin-widget-tinymce > p {
+            margin-top: 0;
+        }
+    }
+
+    #colophon {
+        margin-top: 0;
+    }
+}

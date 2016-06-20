@@ -16,3 +16,19 @@ body {}
 .site-content .widget-area {}
 
 .site-footer {}
+
+/**
+ * Containers
+ */
+.site-content-container,
+.site-branding-container,
+.main-navigation-container,
+.footer-menu-container,
+.footer-widget-container,
+.site-info-container {
+    width: $size__site-main;
+}
+
+.site-content-container {
+    max-width: 950px;
+}
