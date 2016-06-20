@@ -15,12 +15,9 @@
 
 		<?php do_action ( 'anp_entry_header_top' );?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<time class="entry-date"><?php the_date( get_option( 'date-format' ) ); ?></time>
+			<?php nycnowc_network_main_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>
-
 
 		<?php do_action ( 'anp_entry_header_bottom' );?>
 

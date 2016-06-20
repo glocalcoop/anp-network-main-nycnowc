@@ -118,6 +118,13 @@
                 font-family: $font__heading;
                 color: $color__black;
                 @include font-size($smaller);
+                a {
+                   color: $color__black; 
+                }
+            }
+
+            .byline {
+                @include screen-reader-text;
             }
         }
     }
