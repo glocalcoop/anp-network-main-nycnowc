@@ -26,7 +26,18 @@ body {}
 .footer-menu-container,
 .footer-widget-container,
 .site-info-container {
-    width: $size__site-main;
+    width: 90%;
+}
+
+@include breakpoint(md) {
+    .site-content-container,
+    .site-branding-container,
+    .main-navigation-container,
+    .footer-menu-container,
+    .footer-widget-container,
+    .site-info-container {
+        width: $size__site-main;
+    }
 }
 
 .site-content-container {

@@ -2214,7 +2214,16 @@ a {
 .footer-menu-container,
 .footer-widget-container,
 .site-info-container {
-  width: 100%; }
+  width: 90%; }
+
+@media screen and (min-width: 768px) {
+  .site-content-container,
+  .site-branding-container,
+  .main-navigation-container,
+  .footer-menu-container,
+  .footer-widget-container,
+  .site-info-container {
+    width: 100%; } }
 
 .site-content-container {
   max-width: 950px; }
