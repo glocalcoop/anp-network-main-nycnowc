@@ -1,5 +1,9 @@
 .home {
 
+    &.singular-page .entry-header {
+        display: block;
+    }
+
     .intro-content {
         margin-right: $element__width-offset;
         margin-left: $element__width-offset;
