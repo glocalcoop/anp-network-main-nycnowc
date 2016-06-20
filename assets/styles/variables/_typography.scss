@@ -1,16 +1,45 @@
-$font__sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+/**
+ * Fonts
+ */
+
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('assets/fonts/Gotham-Book.eot');
+  src:
+    url('assets/fonts/Gotham-Book.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('assets/fonts/Gotham-Bold.eot');
+  src:
+    url('assets/fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+$font__sans-serif: 'Gotham Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font__bold: 'Gotham Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font__serif: Georgia, "Times New Roman", Times, serif;
-$font__mono: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__mono: "Courier New", Courier, monospace;
 $font__main: $font__sans-serif;
-$font__heading: $font__sans-serif;
+$font__heading: $font__bold;
 $font__code: $font__mono;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;;
 $font__line-height-headings: 1.2;
 
-// SPACING
+// Tracking
+$tracking: 1px;
+$tracking-loose: 2px;
 
+// Line Height
 $space-triple: 72px; 
 $space-double: 48px;
 $space-32: 30px; 
@@ -20,6 +49,7 @@ $space-half: 12px;
 $space-third: 8px; 
 $space-fourth: 6px; 
 
+// Font Size
 $giga: 5; //80
 $mega: 4.5; //72
 $kilo: 4; //64

@@ -1,10 +1,10 @@
 /*
-Theme Name: Activist Network NYC NOWC Theme
+Theme Name: New York City Network of Worker Cooperatives
 Theme URI: https://github.com/glocalcoop/anp-network-main-nycnowc
 Author: Pea, Glocal
 Author URI: http://glocal.coop
-Description: Child theme starter for ANP main network site
-Version: 1.0.0
+Description: Custom child theme for ANP main network site
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: anp-network-main-nycnowc
@@ -19,6 +19,7 @@ Tags:
 @import "variables/variables";
 @import "common/mixins";
 @import "common/extends";
+@import "common/grid";
 
 /*--------------------------------------------------------------
 # Widgets
@@ -39,6 +40,7 @@ Tags:
 # Components
 --------------------------------------------------------------*/
 @import "components/components";
+// @import "components/sprites";
 
 /*--------------------------------------------------------------
 # Plugins

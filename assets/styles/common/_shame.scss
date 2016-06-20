@@ -2,3 +2,11 @@
  * Stylesheet reserved just for your hacky code
  * http://csswizardry.com/2013/04/shame-css/
  */
+
+.layout-2c-r:not(.page-template-template-front) #primary {
+    width: 100%;
+}
+
+.entry-content blockquote:not(.alignleft):not(.alignright) {
+    margin: 1em 1em 1em 2em;
+}
