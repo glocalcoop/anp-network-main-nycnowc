@@ -169,7 +169,8 @@
     }
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:visited {
         color: $color__white;
     }
 }
