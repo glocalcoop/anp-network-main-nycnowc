@@ -1,0 +1,8 @@
+.singular-post {
+    .entry-meta {
+        text-align: center;
+        @include font-size($smaller);
+    }
+}
+
+
