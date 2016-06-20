@@ -2220,6 +2220,13 @@ a {
   max-width: 950px; }
 
 /**
+ * Content Columns
+ */
+.layout-full #secondary {
+  width: 0;
+  display: none; }
+
+/**
  * Footer
  */
 @media screen and (min-width: 768px) {
@@ -2713,9 +2720,6 @@ body {
 .site-footer {
   background-color: #000; }
 
-#secondary {
-  display: none; }
-
 /* for sites that are read right to left (i.e. hebrew) */
 /* home page */
 /* blog template page */
@@ -2758,9 +2762,6 @@ body {
  * Stylesheet reserved just for your hacky code
  * http://csswizardry.com/2013/04/shame-css/
  */
-.layout-2c-r:not(.page-template-template-front) #primary {
-  width: 100%; }
-
 .entry-content blockquote:not(.alignleft):not(.alignright) {
   margin: 1em 1em 1em 2em; }
 
