@@ -1,9 +1,12 @@
 .blog,
 .archive {
+
     #content {
         background-color: $color__background-panel;
     }
 }
+
+
 
 .posts-list {
     .entries-list {
@@ -50,13 +53,13 @@
         .byline {
             @include screen-reader-text;
         }
-        .entry-content {}
-        .entry-footer {}
         .entry-title {
             margin: 0;
             @include font-size($h6);
             font-family: $font__main;
         }
+        .entry-content {}
+        .entry-footer {}
     }
 }
 

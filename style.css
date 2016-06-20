@@ -73,14 +73,34 @@ Tags:
   display: table;
   clear: both; }
 
-#colophon, .posts-list .entries-list, .home .intro-content .entry-content,
+.site-main .page-header {
+  margin-left: calc(-1 * (100vw - 100%)/2);
+  margin-right: calc(-1 * (100vw - 100%)/2); }
+
+.site-main .page-header {
+  padding: 2.5em;
+  background-color: #000;
+  color: #fff; }
+  .site-main .page-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 36px;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center; }
+  .site-main .page-header .entry-meta {
+    color: #fff; }
+    .site-main .page-header .entry-meta a {
+      color: #fff; }
+
+#colophon, .posts-list .entries-list, .event-list, .home .intro-content .entry-content,
 .page-home .intro-content .entry-content, .home .home-widgets .post-list,
 .page-home .home-widgets .post-list {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap; }
 
-.posts-list .entries-list .entry, .home .intro-content .entry-content .intro-text,
+.posts-list .entries-list .entry, .event-list .entry, .home .intro-content .entry-content .intro-text,
 .home .intro-content .entry-content .intro-video,
 .page-home .intro-content .entry-content .intro-text,
 .page-home .intro-content .entry-content .intro-video, .home .home-widgets .post-list li,
@@ -2305,41 +2325,73 @@ a {
   .posts-list .entries-list .entry {
     flex: 0 0 calc(33% - (0.25em * 2)); } }
 
-.site-main > header {
-  margin-left: calc(-1 * (100vw - 100%)/2);
-  margin-right: calc(-1 * (100vw - 100%)/2);
-  background-color: #000;
-  color: #fff; }
+.page-events #content {
+  background-color: #eaede8; }
 
-.site-main h1 {
-  margin: 0;
-  padding: 1.5em;
-  font-size: 36px;
-  font-size: 2.25rem;
-  font-weight: bold;
-  text-align: center; }
+.event-list {
+  transition: all .2s ease-in-out;
+  margin-top: 1em;
+  justify-content: space-between; }
+  .event-list .entry {
+    padding: 1em;
+    background-color: #fff;
+    text-align: center;
+    transition: transform .2s ease-in-out;
+    border: none; }
+    .event-list .entry:hover, .event-list .entry:focus {
+      transform: translate3d(0, -4px, 0); }
+    .event-list .entry a {
+      padding: .25em 0; }
+      .event-list .entry a:hover, .event-list .entry a:focus {
+        padding: .25em 0; }
+  .event-list .entry-title {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .event-list .entry-meta {
+    padding-bottom: .5em;
+    text-transform: uppercase;
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    font-size: 12px;
+    font-size: 0.75rem; }
+    .event-list .entry-meta a {
+      color: #000; }
 
-.singular .site-main header {
-  margin-left: calc(-1 * (100vw - 100%)/2);
-  margin-right: calc(-1 * (100vw - 100%)/2);
-  background-color: #000;
-  color: #fff; }
+@media screen and (min-width: 768px) {
+  .event-list .entry {
+    flex: 0 0 calc(50% - (0.25em * 2)); } }
 
-.singular .site-main h1 {
-  width: 100%;
-  max-width: 950px;
-  margin: 0 auto;
+@media screen and (min-width: 992px) {
+  .event-list .entry {
+    flex: 0 0 calc(33% - (0.25em * 2)); } }
+
+.site-main .event-list .event {
+  padding: 1em; }
+
+.site-main .event-list .event-meta .event-day,
+.site-main .event-list .event-meta .event-date,
+.site-main .event-list .event-meta .event-time {
+  display: inline-block;
   padding-bottom: .5em;
-  font-size: 42.4px;
-  font-size: 2.65rem;
-  font-weight: bold;
-  text-align: center; }
+  text-transform: uppercase;
+  font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-size: 0.75rem; }
+  .site-main .event-list .event-meta .event-day a,
+  .site-main .event-list .event-meta .event-date a,
+  .site-main .event-list .event-meta .event-time a {
+    color: #000; }
 
-.singular .site-main .entry-meta {
-  padding-bottom: 3.5em;
+.site-main .event-list .category a {
+  padding: .25em;
+  background-color: #a6c299;
   color: #fff; }
-  .singular .site-main .entry-meta a {
-    color: #fff; }
+
+.site-main .event-list .event-content {
+  width: 100%; }
 
 .singular-post .entry-meta {
   text-align: center;

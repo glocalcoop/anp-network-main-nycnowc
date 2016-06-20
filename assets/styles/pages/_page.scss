@@ -1,51 +1,5 @@
 .site-main {
-    
-
-    &> header {
-        margin-left: $element__width-offset;
-        margin-right: $element__width-offset;
-        background-color: $color__black;
-        color: $color__white;
+    .page-header {
+        @extend %fullwidth-header;
     }
-
-    h1 {
-        margin: 0;
-        padding: 1.5em;
-        @include font-size($h2);
-        font-weight: bold;
-        text-align: center;
-    }
-
-}
-
-.singular {
-
-   .site-main {
-    
-        header {
-            margin-left: $element__width-offset;
-            margin-right: $element__width-offset;
-            background-color: $color__black;
-            color: $color__white;
-        }
-
-        h1 {
-            width: $size__site-main;
-            max-width: $size__max-width;
-            margin: 0 auto;
-            padding-bottom: .5em;
-            @include font-size($h1);
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .entry-meta {
-            padding-bottom: 3.5em;
-            color: $color__white;
-            a {
-                 color: $color__white;
-            }
-        }
-
-    } 
-}
+} 
