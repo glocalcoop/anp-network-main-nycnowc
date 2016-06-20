@@ -37,3 +37,5 @@ function nycnowc_add_page_image() {
     }
 }
 
+ remove_action( 'anp_page_header_bottom', 'anp_archive_post_type_search' );
+
