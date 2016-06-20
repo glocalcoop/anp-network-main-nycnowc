@@ -139,7 +139,8 @@ a {
   text-align: center; }
 
 .home.singular-page .entry-header {
-  display: block; }
+  display: block;
+  visibility: visible; }
 
 .home .intro-content {
   margin-right: calc(-1 * (100vw - 100%)/2);
