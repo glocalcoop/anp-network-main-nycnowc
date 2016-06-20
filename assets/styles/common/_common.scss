@@ -69,6 +69,10 @@ time.updated {}
 	}
 }
 
+.entry-image {
+	height: auto;
+}
+
 .wp-caption-text {
 	@include font-size($smaller);
 }
