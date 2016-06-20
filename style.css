@@ -2281,6 +2281,16 @@ a {
     color: #000;
     font-size: 12px;
     font-size: 0.75rem; }
+    .posts-list .entries-list .entry-meta a {
+      color: #000; }
+  .posts-list .entries-list .byline {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    /* many screen reader and browser combinations announce broken words as they would appear visually */
+    word-wrap: normal !important; }
   .posts-list .entries-list .entry-title {
     margin: 0;
     font-size: 16px;
@@ -2444,6 +2454,18 @@ a {
     color: #000;
     font-size: 12px;
     font-size: 0.75rem; }
+    .home .home-widgets .post-list .entry-meta a,
+    .page-home .home-widgets .post-list .entry-meta a {
+      color: #000; }
+  .home .home-widgets .post-list .byline,
+  .page-home .home-widgets .post-list .byline {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    /* many screen reader and browser combinations announce broken words as they would appear visually */
+    word-wrap: normal !important; }
 
 @media screen and (min-width: 768px) {
   .home .intro-content .entry-content,
