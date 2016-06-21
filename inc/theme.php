@@ -100,9 +100,21 @@ add_action( 'anp_footer_bottom', 'nycnowc_footer_menus' );
 
 
 /**
- * Remove Search from Archive
+ * Remove Search and Filters from Archive
  *
  * @since 1.0.1
  */
+function anp_archive_post_filter() {
+    return '';
+}
+add_action( 'anp_page_header_bottom', 'anp_archive_post_filter' );
+
+function anp_archive_post_type_search() {
+    return '';
+}
+add_action( 'anp_page_header_bottom', 'anp_archive_post_type_search' );
+
 remove_action( 'anp_page_header_bottom', 'anp_archive_post_type_search' );
+
+remove_action( 'anp_page_header_bottom', 'anp_archive_post_filter' );
 
