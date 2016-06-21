@@ -1,0 +1,17 @@
+.widget {
+    &.join-us {
+        text-align: center;
+        .widget-title {
+            @include font-size($h4);
+            text-transform: none;
+        }
+    }
+    &.contact-info {
+        .widget-title {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@include breakpoint(md) {}
