@@ -73,7 +73,7 @@ Tags:
   display: table;
   clear: both; }
 
-.posts-list .entries-list, .event-list, .home .intro-content .entry-content,
+.entries-list, .home .intro-content .entry-content,
 .page-home .intro-content .entry-content, .home .home-widgets .post-list,
 .page-home .home-widgets .post-list {
   display: -webkit-box;
@@ -102,13 +102,13 @@ Tags:
     .site-main .page-header .entry-meta a {
       color: #fff; }
 
-.posts-list .entries-list, .event-list, .home .intro-content .entry-content,
+.entries-list, .home .intro-content .entry-content,
 .page-home .intro-content .entry-content, .home .home-widgets .post-list,
 .page-home .home-widgets .post-list {
   flex-flow: row;
   flex-wrap: wrap; }
 
-.posts-list .entries-list .entry, .event-list .entry, .home .intro-content .entry-content .intro-text,
+.entries-list .entry, .home .intro-content .entry-content .intro-text,
 .home .intro-content .entry-content .intro-video,
 .page-home .intro-content .entry-content .intro-text,
 .page-home .intro-content .entry-content .intro-video, .home .home-widgets .post-list li,
@@ -2204,6 +2204,17 @@ a {
   a:visited {
     color: #a6c299; }
 
+.category a,
+.category a:hover,
+.category a:focus,
+.tag a,
+.tag a:hover,
+.tag a:focus {
+  background-color: #a6c299;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 5px 10px; }
+
 .taxonomy-description {
   text-align: center; }
   .taxonomy-description p {
@@ -2333,33 +2344,50 @@ a {
 .archive #content {
   background-color: #eaede8; }
 
-.posts-list .entries-list {
+.entries-list {
   transition: all .2s ease-in-out;
   margin-top: 1em;
   justify-content: space-between; }
-  .posts-list .entries-list .entry {
+  .entries-list .entry {
     padding: 1em;
     margin-bottom: .5em;
     background-color: #fff;
     text-align: center;
     transition: transform .2s ease-in-out;
     border: none; }
-    .posts-list .entries-list .entry:hover, .posts-list .entries-list .entry:focus {
+    .entries-list .entry:hover, .entries-list .entry:focus {
       transform: translate3d(0, -4px, 0); }
-    .posts-list .entries-list .entry a {
+    .entries-list .entry a {
       padding: .25em 0; }
-      .posts-list .entries-list .entry a:hover, .posts-list .entries-list .entry a:focus {
+      .entries-list .entry a:hover, .entries-list .entry a:focus {
         padding: .25em 0; }
-  .posts-list .entries-list .entry-meta {
+  .entries-list .entry-meta {
     padding-bottom: .5em;
     text-transform: uppercase;
     font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #000;
     font-size: 12px;
     font-size: 0.75rem; }
-    .posts-list .entries-list .entry-meta a {
+    .entries-list .entry-meta a {
       color: #000; }
-  .posts-list .entries-list .byline {
+  .entries-list .entry-image {
+    width: 100%;
+    margin: 0;
+    float: none; }
+    .entries-list .entry-image img {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .entries-list .category a,
+  .entries-list .category a:hover,
+  .entries-list .category a:focus,
+  .entries-list .tag a,
+  .entries-list .tag a:hover,
+  .entries-list .tag a:focus {
+    background-color: #a6c299;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 10px; }
+  .entries-list .byline {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
     overflow: hidden;
@@ -2367,85 +2395,19 @@ a {
     width: 1px;
     /* many screen reader and browser combinations announce broken words as they would appear visually */
     word-wrap: normal !important; }
-  .posts-list .entries-list .entry-title {
+  .entries-list .entry-title {
     margin: 0;
     font-size: 16px;
     font-size: 1rem;
     font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 @media screen and (min-width: 768px) {
-  .posts-list .entries-list .entry {
+  .entries-list .entry {
     flex: 0 0 calc(50% - (0.25em * 2)); } }
 
 @media screen and (min-width: 992px) {
-  .posts-list .entries-list .entry {
+  .entries-list .entry {
     flex: 0 0 calc(33% - (0.25em * 2)); } }
-
-.page-events #content {
-  background-color: #eaede8; }
-
-.event-list {
-  transition: all .2s ease-in-out;
-  margin-top: 1em;
-  justify-content: space-between; }
-  .event-list .entry {
-    padding: 1em;
-    margin-bottom: .5em;
-    background-color: #fff;
-    text-align: center;
-    transition: transform .2s ease-in-out;
-    border: none; }
-    .event-list .entry:hover, .event-list .entry:focus {
-      transform: translate3d(0, -4px, 0); }
-    .event-list .entry a {
-      padding: .25em 0; }
-      .event-list .entry a:hover, .event-list .entry a:focus {
-        padding: .25em 0; }
-  .event-list .entry-title {
-    margin: 0;
-    font-size: 16px;
-    font-size: 1rem;
-    font-family: "Gotham Book", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  .event-list .entry-meta {
-    padding-bottom: .5em;
-    text-transform: uppercase;
-    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #000;
-    font-size: 12px;
-    font-size: 0.75rem; }
-    .event-list .entry-meta a {
-      color: #000; }
-
-@media screen and (min-width: 768px) {
-  .event-list .entry {
-    flex: 0 0 calc(50% - (0.25em * 2)); } }
-
-@media screen and (min-width: 992px) {
-  .event-list .entry {
-    flex: 0 0 calc(33% - (0.25em * 2)); } }
-
-.site-main .event-list .event {
-  padding: 1em; }
-
-.site-main .event-list .event-meta .event-day,
-.site-main .event-list .event-meta .event-date,
-.site-main .event-list .event-meta .event-time {
-  display: inline-block;
-  padding-bottom: .5em;
-  text-transform: uppercase;
-  font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #000;
-  font-size: 12px;
-  font-size: 0.75rem; }
-  .site-main .event-list .event-meta .event-day a,
-  .site-main .event-list .event-meta .event-date a,
-  .site-main .event-list .event-meta .event-time a {
-    color: #000; }
-
-.site-main .event-list .category a {
-  padding: .25em;
-  background-color: #a6c299;
-  color: #fff; }
 
 .site-main .event-list .event-content {
   width: 100%; }
@@ -2584,7 +2546,8 @@ a {
 @media screen and (min-width: 768px) {
   .home .intro-content .entry-content,
   .page-home .intro-content .entry-content {
-    padding: .5em; }
+    padding-top: 100px;
+    padding-bottom: 100px; }
     .home .intro-content .entry-content .intro-text,
     .page-home .intro-content .entry-content .intro-text {
       flex: 0 0 75%; }

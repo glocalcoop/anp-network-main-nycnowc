@@ -32,7 +32,6 @@
         padding-top: 0;
         padding-bottom: 0;
         color: $color__white;
-
     }
 
     .home-widgets {
@@ -143,7 +142,8 @@
     .page-home {
         .intro-content {
             .entry-content {
-                padding: .5em;
+                padding-top: 100px;
+                padding-bottom: 100px;
 
                 .intro-text {
                     flex: 0 0 75%;
