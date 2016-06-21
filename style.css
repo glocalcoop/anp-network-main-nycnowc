@@ -2204,6 +2204,11 @@ a {
   a:visited {
     color: #a6c299; }
 
+.taxonomy-description {
+  align: center; }
+  .taxonomy-description p {
+    padding: 0; }
+
 .entry-image {
   height: auto; }
 
