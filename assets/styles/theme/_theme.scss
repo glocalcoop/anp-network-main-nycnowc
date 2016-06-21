@@ -69,7 +69,7 @@ body {
     .bottom-navigation,
     .footer-widgets,
     .copyright {
-        background-color: $color__transparent;
+        background-color: $color__transparent !important;
         color: $color__white;
 
         a {
