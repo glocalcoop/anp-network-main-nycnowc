@@ -36,6 +36,9 @@
     }
 
     .home-widgets {
+        .widget .wrap {
+            padding: 0;
+        }
         .siteorigin-widget-tinymce > p {
             margin-top: 0;
         }
@@ -86,6 +89,7 @@
             li {
                 @extend %grid-col;
                 padding: 1em;
+                margin-bottom: .5em;
                 background-color: $color__white;
                 text-align: center;
                 border: none;
@@ -126,6 +130,7 @@
             .byline {
                 @include screen-reader-text;
             }
+
         }
     }
 }

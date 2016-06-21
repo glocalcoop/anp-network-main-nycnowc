@@ -13,11 +13,13 @@
         transition: all .2s ease-in-out;
         margin-top: 1em;
         @extend %grid;
-        justify-content: space-between;
+        // justify-content: space-between;
+        align-content: flex-start;
 
         .entry {
             @extend %grid-col;
             padding: 1em;
+            margin-bottom: .5em;
             background-color: $color__white;
             text-align: center;
             transition: transform .2s ease-in-out;

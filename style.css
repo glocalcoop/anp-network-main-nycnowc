@@ -2284,9 +2284,10 @@ a {
 .posts-list .entries-list {
   transition: all .2s ease-in-out;
   margin-top: 1em;
-  justify-content: space-between; }
+  align-content: flex-start; }
   .posts-list .entries-list .entry {
     padding: 1em;
+    margin-bottom: .5em;
     background-color: #fff;
     text-align: center;
     transition: transform .2s ease-in-out;
@@ -2337,6 +2338,7 @@ a {
   justify-content: space-between; }
   .event-list .entry {
     padding: 1em;
+    margin-bottom: .5em;
     background-color: #fff;
     text-align: center;
     transition: transform .2s ease-in-out;
@@ -2435,6 +2437,10 @@ a {
   padding-bottom: 0;
   color: #fff; }
 
+.home .home-widgets .widget .wrap,
+.page-home .home-widgets .widget .wrap {
+  padding: 0; }
+
 .home .home-widgets .siteorigin-widget-tinymce > p,
 .page-home .home-widgets .siteorigin-widget-tinymce > p {
   margin-top: 0; }
@@ -2480,6 +2486,7 @@ a {
   .home .home-widgets .post-list li,
   .page-home .home-widgets .post-list li {
     padding: 1em;
+    margin-bottom: .5em;
     background-color: #fff;
     text-align: center;
     border: none;
