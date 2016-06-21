@@ -69,6 +69,18 @@ time.updated {}
 	}
 }
 
+.category,
+.tag {
+	a,
+	a:hover,
+	a:focus {
+		background-color: $color__primary;
+		color: $color__white;
+		text-transform: uppercase;
+		padding: ($element__spacer) ($element__spacer * 2);
+	}
+}
+
 .taxonomy-description {
 	text-align: center;
 
