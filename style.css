@@ -73,19 +73,28 @@ Tags:
   display: table;
   clear: both; }
 
+.posts-list .entries-list, .event-list, .home .intro-content .entry-content,
+.page-home .intro-content .entry-content, .home .home-widgets .post-list,
+.page-home .home-widgets .post-list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
 .site-main .page-header {
   margin-left: calc(-1 * (100vw - 100%)/2);
   margin-right: calc(-1 * (100vw - 100%)/2); }
 
 .site-main .page-header {
-  padding: 2.5em;
+  padding: 2.75em;
   background-color: #000;
   color: #fff; }
   .site-main .page-header h1 {
     margin: 0;
     padding: 0;
-    font-size: 36px;
-    font-size: 2.25rem;
+    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center; }
   .site-main .page-header .entry-meta {
@@ -93,10 +102,9 @@ Tags:
     .site-main .page-header .entry-meta a {
       color: #fff; }
 
-#colophon, .posts-list .entries-list, .event-list, .home .intro-content .entry-content,
+.posts-list .entries-list, .event-list, .home .intro-content .entry-content,
 .page-home .intro-content .entry-content, .home .home-widgets .post-list,
 .page-home .home-widgets .post-list {
-  display: flex;
   flex-flow: row;
   flex-wrap: wrap; }
 
@@ -2261,18 +2269,57 @@ a {
 /**
  * Footer
  */
+#colophon .widget-first {
+  padding-top: 0; }
+
+#colophon .widget-last {
+  padding-bottom: 0; }
+
+#colophon .footer-menu {
+  width: 100%;
+  text-align: center; }
+
+#colophon .copyright {
+  width: 100%; }
+
+#colophon .social-links,
+#colophon .footer-widgets {
+  text-align: center; }
+
+#colophon .footer-widgets {
+  padding-bottom: 0; }
+
 @media screen and (min-width: 768px) {
   #colophon {
-    flex-direction: row-reverse;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
     justify-content: space-between; }
-    #colophon .bottom-navigation,
+    #colophon .bottom-navigation {
+      flex: 0 0 100%;
+      padding-top: 0; }
+    #colophon .footer-menu {
+      text-align: left;
+      padding: 1em; }
+    #colophon .social-links,
     #colophon .footer-widgets {
       flex: 0 0 calc(50% - (0.25em * 2));
       padding-top: 1.5em; }
-    #colophon .footer-menu {
+    #colophon .footer-widgets {
+      padding-bottom: 1em;
+      text-align: left; }
+    #colophon .social-links {
       text-align: right; }
+    #colophon .social-menu {
+      display: block;
+      float: right; }
     #colophon .widget .wrap {
-      padding-top: 0; } }
+      padding-top: 0;
+      padding-bottom: 0; } }
 
 /*--------------------------------------------------------------
 # Pages
@@ -2447,8 +2494,8 @@ a {
 
 .home .home-widgets .widget-title,
 .page-home .home-widgets .widget-title {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: none; }
 
 .home .home-widgets .category,
@@ -2576,15 +2623,79 @@ a {
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px !important;
+  padding: 10px 30px !important; }
+
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  background-color: #a6c299 !important; }
+
+input[type="reset"] {
+  background-color: #eb6361 !important; }
+
 .contact-info p {
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 2; }
 
+.widget.join-us {
+  text-align: center; }
+  .widget.join-us .widget-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    text-transform: none; }
+
+.widget.contact-info .widget-title {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
+#masthead .main-navigation {
+  text-transform: uppercase;
+  border-top: none; }
+  #masthead .main-navigation li {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  #masthead .main-navigation ul a:hover, #masthead .main-navigation ul a:focus {
+    background-color: transparent;
+    color: #6f995c; }
+
+#masthead .menu-toggle {
+  background-color: transparent;
+  border: none;
+  color: #a6c299;
+  text-transform: uppercase; }
+
+#masthead .site-branding .custom-logo-link .custom-logo {
+  width: 100%;
+  max-width: 170px;
+  height: auto; }
+
+@media screen and (min-width: 768px) {
+  #masthead .main-navigation li {
+    padding: 0 20px; } }
+
+#colophon .footer-menu {
+  text-transform: uppercase; }
+  #colophon .footer-menu li {
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 .icon {
   color: #fff;
-  font-size: 22px;
-  font-size: 1.375rem; }
+  font-size: 24px;
+  font-size: 1.5rem; }
 
 .facebook .icon:before {
   margin-right: .5em;
@@ -2671,10 +2782,14 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon {
+.icon,
+.social-links ul a {
   color: #fff;
-  font-size: 22px;
-  font-size: 1.375rem; }
+  font-size: 24px;
+  font-size: 1.5rem; }
+  .icon:before,
+  .social-links ul a:before {
+    color: #fff; }
 
 .facebook .icon:before {
   margin-right: .5em;
@@ -2787,32 +2902,6 @@ body {
     color: #a6c299; }
     body a:hover, body a:focus, body a:visited {
       color: #8aaf79; }
-
-#masthead .main-navigation {
-  text-transform: uppercase;
-  border-top: none; }
-  #masthead .main-navigation li {
-    font-size: 12px;
-    font-size: 0.75rem;
-    font-family: "Gotham Bold", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  #masthead .main-navigation ul a:hover, #masthead .main-navigation ul a:focus {
-    background-color: transparent;
-    color: #6f995c; }
-
-#masthead .menu-toggle {
-  background-color: transparent;
-  border: none;
-  color: #a6c299;
-  text-transform: uppercase; }
-
-#masthead .site-branding .custom-logo-link .custom-logo {
-  width: 100%;
-  max-width: 170px;
-  height: auto; }
-
-@media screen and (min-width: 768px) {
-  #masthead .main-navigation li {
-    padding: 0 20px; } }
 
 @media screen and (min-width: 768px) {
   .site-header {

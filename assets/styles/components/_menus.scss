@@ -1,3 +1,63 @@
+#masthead {
+    .main-navigation {
+        text-transform: uppercase;
+        border-top: none;
+        li {
+            @include font-size($smaller);
+            font-family: $font__bold;
+        }
+
+        ul {
+            a {
+                &:hover,
+                &:focus {
+                    background-color: $color__transparent;
+                    color: darken($color__link,20%);
+                }
+            }
+        }
+
+    }
+    .menu-toggle {
+        background-color: $color__transparent;
+        border: none;
+        color: $color__link;
+        text-transform: uppercase;
+    }
+
+    .site-branding {
+        .custom-logo-link {
+            .custom-logo {
+                width: 100%;
+                max-width: 170px;
+                height: auto;
+            }
+        }
+    }
+
+}
+
+@include breakpoint(md) {
+    #masthead {
+        .main-navigation {
+            li {
+                padding: 0 ($element__spacer * 4);
+            }
+        }
+    }
+}
+
+#colophon {
+    .footer-menu {
+        text-transform: uppercase;
+        li {
+            @include font-size($smaller);
+            font-family: $font__bold;
+        }
+    }
+}
+
+
 .icon {
     color: $color__white;
     @include font-size($h4);

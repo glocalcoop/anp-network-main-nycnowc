@@ -113,14 +113,14 @@
 
 %fullwidth-header {
   @extend %fullwidth;
-  padding: 2.5em;
+  padding: 2.75em;
   background-color: $color__black;
   color: $color__white;
 
   h1 {
       margin: 0;
       padding: 0;
-      @include font-size($h2);
+      @include font-size($h1);
       font-weight: bold;
       text-align: center;
   }

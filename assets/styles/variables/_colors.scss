@@ -75,7 +75,7 @@ $colors__buttons: (
     'info': $color__secondary,
     'warning': #f39c12,
     'danger': #eb6361,
-    'default': $color__mid-grey
+    'default': $color__primary
 );
 
 $color__success: color($colors__buttons, 'success');
