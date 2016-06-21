@@ -1,7 +1,7 @@
 %grid {
-  display: flex;
-  flex-flow: row; 
-  flex-wrap: wrap;
+    @extend %flexbox-container;
+    flex-flow: row; 
+    flex-wrap: wrap;
 }
 
 %grid-col {

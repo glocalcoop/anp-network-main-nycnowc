@@ -1,6 +1,11 @@
-.icon {
+.icon,
+.social-links ul a {
     color: $color__white;
     @include font-size($h4);
+
+    &:before {
+        color: $color__white;
+    }
 }
 
 .facebook .icon {
@@ -39,3 +44,20 @@
 .email .icon {
     @include icon-font(envelope, before);
 }
+
+
+// .social-links {
+//     ul {
+//         a[href*="facebook.com"],
+//         a[href*="twitter.com"],
+//         a[href*="instagram.com"],
+//         a[href*="twitter.com"],
+//         a[href*="twitter.com"],
+//         a[href*="flickr.com"] {
+//             &:before {
+//                 color: $color__white;
+//             }
+//         }
+//     }
+// }
+

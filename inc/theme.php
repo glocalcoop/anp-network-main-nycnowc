@@ -77,5 +77,32 @@ function nycnowc_network_main_posted_on() {
 }
 endif;
 
+
+/**
+ * Arrange menus in footer
+ *
+ * @since 1.0.1
+ */
+function nycnowc_footer_menus() {
+
+    get_template_part( 'components/social-menu/social-menu' );
+
+    get_template_part( 'components/bottom-navigation/bottom-navigation' );
+
+    echo '<div class="copyright">';
+
+    get_template_part( 'components/site-info/site-info' );
+
+    echo '</div>';
+
+}
+add_action( 'anp_footer_bottom', 'nycnowc_footer_menus' );
+
+
+/**
+ * Remove Search from Archive
+ *
+ * @since 1.0.1
+ */
 remove_action( 'anp_page_header_bottom', 'anp_archive_post_type_search' );
 

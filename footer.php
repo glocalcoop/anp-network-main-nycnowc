@@ -20,8 +20,6 @@
 
         <?php do_action ( 'anp_footer_top' );?>
 
-        <?php get_template_part( 'components/bottom-navigation/bottom-navigation' ); ?>
-
         <?php if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
         <?php $widget_class = anp_network_main_count_widgets( 'sidebar-footer' ); ?>
         <div class="footer-widgets <?php echo $widget_class; ?>">
@@ -30,10 +28,6 @@
             </div>
         </div>
         <?php endif; ?>
-
-        <div class="copyright">
-            <?php get_template_part( 'components/site-info/site-info' ); ?>
-        </div>
 
         <?php do_action ( 'anp_footer_bottom' );?>
 

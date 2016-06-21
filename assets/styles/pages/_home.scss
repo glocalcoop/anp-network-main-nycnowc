@@ -61,21 +61,24 @@
 
 .home,
 .page-home {
-    .intro-content .entry-content {
-        @extend %grid;
-        align-items: center;
-        justify-content: center;
+    .intro-content {
 
-        .intro-text,
-        .intro-video {
-            @extend %grid-col;
-        }
+        .entry-content {
+            @extend %grid;
+            align-items: center;
+            justify-content: center;
 
-        .intro-video {
-            border-radius: 25%;
-            padding: 3em 0;
-            text-align: center;
-            background-color: rgba($color__black,.3);
+            .intro-text,
+            .intro-video {
+                @extend %grid-col;
+            }
+
+            .intro-video {
+                border-radius: 25%;
+                padding: 3em 0;
+                text-align: center;
+                background-color: rgba($color__black,.3);
+            }
         }
     }
 
@@ -138,13 +141,16 @@
 @include breakpoint(md) {
     .home,
     .page-home {
-        .intro-content .entry-content {
-            padding: .5em;
-            .intro-text {
-                flex: 0 0 75%;
-            }
-            .intro-video {
-                flex: 0 0 25%;
+        .intro-content {
+            .entry-content {
+                padding: .5em;
+
+                .intro-text {
+                    flex: 0 0 75%;
+                }
+                .intro-video {
+                    flex: 0 0 25%;
+                }
             }
         }
         .home-widgets {

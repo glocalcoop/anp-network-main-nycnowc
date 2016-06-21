@@ -26,7 +26,7 @@ body {}
 .footer-menu-container,
 .footer-widget-container,
 .site-info-container {
-    width: 90%;
+    width: $size__site-width;
 }
 
 @include breakpoint(md) {
@@ -61,26 +61,82 @@ body {}
  * Footer
  */
 #colophon {
-    @extend %grid;
+    .widget-first {
+        padding-top: 0;
+    }
+
+    .widget-last {
+        padding-bottom: 0;
+    }
+
+    .footer-menu {
+        width: $size__site-main;
+        text-align: center;
+    }
+
+    .copyright {
+        width: $size__site-main;
+    }
+
+    .social-links,
+    .footer-widgets {
+        text-align: center;
+    }
+
+    .footer-widgets {
+        padding-bottom: 0;
+    }
 }
 
 @include breakpoint(md) {
     
     #colophon {
-        flex-direction: row-reverse;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: row; 
+        flex-wrap: wrap;
         justify-content: space-between;
 
-        .bottom-navigation,
+        .widget-first {}
+
+        .widget-last {}
+
+        .bottom-navigation {
+            flex: 0 0 100%;
+            padding-top: 0;
+        }
+
+        .footer-menu {
+            text-align: left;
+            padding: 1em;
+        }
+
+        .social-links,
         .footer-widgets {
             @include flex-grid-cols(2);
             padding-top: 1.5em;
         }
-        .footer-menu {
+
+        .footer-widgets {
+            padding-bottom: 1em;
+            text-align: left;
+        }
+
+        .social-links {
             text-align: right;
+        }
+
+        .social-menu {
+            display: block;
+            float: right;
         }
 
         .widget .wrap {
             padding-top: 0;
+            padding-bottom: 0;
         }
     }
 
