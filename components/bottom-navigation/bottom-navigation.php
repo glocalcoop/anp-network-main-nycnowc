@@ -6,7 +6,7 @@
             'menu_class'        => 'footer-menu',
             'depth'             => 1,
             'container_class'   => 'footer-menu-container',
-            'link_before'       => '<i class="icon"> </i><span class="screen-reader-text">',
+            'link_before'       => '<span class="menu-text">',
             'link_after'        => '</span>',
             'fallback_cb'       => false,
          ) );
