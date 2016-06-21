@@ -2284,7 +2284,7 @@ a {
 .posts-list .entries-list {
   transition: all .2s ease-in-out;
   margin-top: 1em;
-  align-content: flex-start; }
+  justify-content: space-between; }
   .posts-list .entries-list .entry {
     padding: 1em;
     margin-bottom: .5em;
@@ -2846,6 +2846,8 @@ body {
       color: #fff; }
   #colophon .footer-widgets .wrap {
     background-color: transparent; }
+  #colophon .footer-widgets .widget-title {
+    text-transform: none; }
 
 .site-footer {
   background-color: #000; }
