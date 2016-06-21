@@ -123,9 +123,16 @@ body {
             color: $color__white;
         }
     }
-    .footer-widgets .wrap {
-        background-color: $color__transparent;
+    .footer-widgets {
+        .wrap {
+            background-color: $color__transparent;
+        }
+
+        .widget-title {
+            text-transform: none;
+        }
     }
+
     .bottom-navigation {}
     .footer-widgets {}
     .copyright {}
