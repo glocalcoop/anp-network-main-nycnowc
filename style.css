@@ -2207,7 +2207,7 @@ a {
 .taxonomy-description {
   text-align: center; }
   .taxonomy-description p {
-    padding: 0; }
+    margin: 0; }
 
 .entry-image {
   height: auto; }
