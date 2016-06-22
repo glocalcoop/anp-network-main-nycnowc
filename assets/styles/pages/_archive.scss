@@ -102,3 +102,20 @@
     }
 
 }
+
+
+.format-video {
+    .entry-meta,
+    .entry-content {
+        @include clearfix;
+
+    }
+    .entry-meta {
+        height: 24px;
+    }
+    time.updated {
+        @include clearfix;
+        @extend %visable;
+        display: block;
+    }
+}
