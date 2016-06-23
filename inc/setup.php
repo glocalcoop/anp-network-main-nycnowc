@@ -51,6 +51,8 @@ function anp_network_main_child_scripts() {
     $parent_style = 'anp-network-main-style';
 
     wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+
+    wp_enqueue_script( 'theme-js', get_stylesheet_directory_uri() . '/dist/scripts/main.js', array('jquery'), '', true );
   
 }
 add_action( 'wp_enqueue_scripts', 'anp_network_main_child_scripts' );

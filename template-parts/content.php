@@ -21,7 +21,6 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-
 		<?php do_action ( 'anp_entry_header_bottom' );?>
 
 	</header><!-- .entry-header -->

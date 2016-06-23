@@ -5,3 +5,14 @@
 /**
  * Network Posts
  */
+
+/**
+ * Events
+ */
+.eo-events-widget {
+    @extend .entries-list;
+
+    li {
+        @extend .entry;
+    }
+}

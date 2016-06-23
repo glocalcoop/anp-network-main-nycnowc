@@ -153,19 +153,21 @@
                 }
             }
         }
-        .home-widgets {
-            &.per-row-1,
-            &.per-row-2,
-            &.per-row-2 {
-                .widget {
-                    width: 100%;
-                }
+    }
+    .home-widgets {
+        &.per-row-1,
+        &.per-row-2,
+        &.per-row-3 {
+            .widget {
+                width: 100% !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
             }
+        }
 
-            .post-list {
-                li {
-                    @include flex-grid-cols(2);
-                }
+        .post-list {
+            li {
+                @include flex-grid-cols(2);
             }
         }
     }
