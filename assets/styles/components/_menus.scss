@@ -47,13 +47,37 @@
     }
 }
 
-.inline-list {
-    @include no-bullets;
-}
+// TOC Menu
+.toc-list {       
+    margin-top: 1em;       
+    padding: 0;         
+    @include no-bullets;     
+    display: flex;      
+    flex-wrap: wrap;        
 
+    li {        
+        box-sizing: border-box;         
+        padding: 10px;      
+    }       
+}        
+
+@include breakpoint(md) {      
+    .toc-list {
+        li {        
+            flex: 1 0 50%;      
+        }       
+    }       
+}        
+
+@include breakpoint(lg) {      
+    .toc-list {       
+        li {        
+            flex: 1 0 33%;      
+        }       
+    }       
+}  
 
 // Drop-down Menu
-
  /* Dropdown Container */
 .dropdown {
     position: relative;
@@ -105,6 +129,7 @@
        display:block; 
     }
 }
+
 
 
 .back-to-top {

@@ -43,6 +43,9 @@ Activist Network NYC NOWC Theme includes support for Jetpack's Infinite Scroll a
 * Added JS for back to top function  `<a class="back-to-top" href="#"><i class="icon"></i><span class="screen-reader-text">Back to Top</span></a>`
 * Fixed issue with homepage widgets with class `.per-row-3` not being full width
 * Applied grid styles to events widget
+* Made components styles more modular.
+* Changed main breakpoint for containers to lg
+* Added some directory styling that probably won't be used.
 
 == Credits ==
 

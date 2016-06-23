@@ -1,0 +1,47 @@
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    color: $color__white;
+    text-transform: uppercase;
+    font-family: $font__bold;
+    font-size: 12px !important;
+    padding: ($element__spacer * 2) ($element__spacer * 6) !important;
+}
+
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+    background-color: $color__default !important;
+}
+
+input[type="reset"] {
+    background-color: $color__danger !important;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+
+    &:focus {}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {}
+
+textarea {}
+
+.contact-info {
+    p {
+        @include font-size($smaller);
+        line-height: 2;
+    }
+}
