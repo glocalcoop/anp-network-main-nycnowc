@@ -47,6 +47,96 @@
     }
 }
 
+.inline-list {
+    @include no-bullets;
+}
+
+
+// Drop-down Menu
+
+ /* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;   
+    height: 50px; 
+}
+
+ /* Dropdown Button */
+.dropdown-link {
+    background-color: $color__primary;
+    color: $color__white;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: darken($color__primary,10%);
+    }
+}
+
+ /* Dropdown List */
+.dropdown-list {
+    @include no-bullets;
+    display: none;
+    top: 34px;
+    position: absolute;
+    background-color: $color__white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+    a {
+        color: $color__foreground;
+        padding: .25em .5em;
+        text-decoration: none;
+        display: block;
+
+        &:hover,
+        &:focus {
+            background-color: $color__lightest-grey;
+        }
+
+    }
+
+}
+
+.show {
+    .dropdown-list {
+       display:block; 
+    }
+}
+
+
+.back-to-top {
+    position: fixed;
+    background-color: $color__lightest-grey;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    z-index: 100;
+    text-decoration: none;
+    color: $color__foreground;
+
+    .icon {
+        @include icon-font(chevron-up,after);
+        color: $color__foreground;
+        @include font-size($h2);
+    }
+
+}
+ 
+  
+ 
+.back-to-top i {
+ 
+  font-size: 60px;
+ 
+}
+
+
+
 #colophon {
     .footer-menu {
         text-transform: uppercase;
