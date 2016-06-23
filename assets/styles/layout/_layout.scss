@@ -29,7 +29,7 @@ body {}
     width: $size__site-width;
 }
 
-@include breakpoint(md) {
+@include breakpoint(lg) {
     .site-content-container,
     .site-branding-container,
     .main-navigation-container,

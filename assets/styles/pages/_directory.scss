@@ -1,0 +1,26 @@
+.coop-type {         
+    display: flex;      
+    flex-wrap: wrap;              
+    h2 {
+        width: 100%;        
+    }       
+    .entry {}       
+}        
+
+@include breakpoint(md) {      
+    .coop-type {        
+        h2 {}       
+        .entry {        
+            flex: 1 0 50%;      
+        }       
+    }       
+}        
+
+@include breakpoint(lg) {
+    .coop-type {        
+        h2 {}       
+        .entry {        
+            flex: 1 0 33%;      
+        }       
+    }  
+}   
