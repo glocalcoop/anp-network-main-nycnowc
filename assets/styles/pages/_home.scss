@@ -20,8 +20,10 @@
     .entry.intro-content {
         border-top-color: $color__transparent;
         border-top-width: 1px; 
+        color: $color__text-inverted;
         p {
             @include font-size($h6);
+            color: $color__text-inverted;
         }
     }
 

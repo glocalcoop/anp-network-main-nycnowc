@@ -1,6 +1,7 @@
 .icon,
 .social-links ul a {
     color: $color__white;
+    border: none;
     @include font-size($h4);
 
     &:before {

@@ -5,7 +5,7 @@ Theme URI: https://github.com/glocalcoop/anp-network-main-nycnowc
 Author: Pea, Glocal
 Author URI: http://glocal.coop
 Description: Custom child theme for ANP main network site
-Version: 1.0.1
+Version: 1.0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: anp-network-main-nycnowc
@@ -2430,13 +2430,6 @@ a {
 .format-video .entry-meta {
   height: 24px; }
 
-.format-video time.updated {
-  display: block; }
-  .format-video time.updated:after {
-    content: "";
-    display: table;
-    clear: both; }
-
 .coop-type {
   display: flex;
   flex-wrap: wrap; }
@@ -2480,13 +2473,15 @@ a {
 .page-home .eo-events-widget li.intro-content, .eo-events-widget
 .page-home li.intro-content {
   border-top-color: transparent;
-  border-top-width: 1px; }
+  border-top-width: 1px;
+  color: #fff; }
   .home .entry.intro-content p, .home .eo-events-widget li.intro-content p, .eo-events-widget .home li.intro-content p,
   .page-home .entry.intro-content p,
   .page-home .eo-events-widget li.intro-content p, .eo-events-widget
   .page-home li.intro-content p {
     font-size: 16px;
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: #fff; }
 
 .home .entry-content,
 .page-home .entry-content {
@@ -2638,6 +2633,7 @@ a {
 .icon,
 .social-links ul a {
   color: #fff;
+  border: none;
   font-size: 24px;
   font-size: 1.5rem; }
   .icon:before,
@@ -2941,9 +2937,13 @@ a {
     font-size: 1.5rem;
     text-transform: none; }
 
-.widget.contact-info .widget-title {
-  padding-bottom: 0;
-  margin-bottom: 0; }
+.widget.contact-info {
+  color: #fff; }
+  .widget.contact-info .widget-title {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .widget.contact-info p {
+    color: #fff; }
 
 button,
 .button,
@@ -2982,9 +2982,13 @@ input[type="reset"] {
     font-size: 1.5rem;
     text-transform: none; }
 
-.widget.contact-info .widget-title {
-  padding-bottom: 0;
-  margin-bottom: 0; }
+.widget.contact-info {
+  color: #fff; }
+  .widget.contact-info .widget-title {
+    padding-bottom: 0;
+    margin-bottom: 0; }
+  .widget.contact-info p {
+    color: #fff; }
 
 #masthead .main-navigation {
   text-transform: uppercase;
@@ -3197,6 +3201,7 @@ input[type="reset"] {
 .icon,
 .social-links ul a {
   color: #fff;
+  border: none;
   font-size: 24px;
   font-size: 1.5rem; }
   .icon:before,

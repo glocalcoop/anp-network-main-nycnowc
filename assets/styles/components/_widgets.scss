@@ -7,9 +7,13 @@
         }
     }
     &.contact-info {
+        color: $color__text-inverted;
         .widget-title {
             padding-bottom: 0;
             margin-bottom: 0;
+        }
+        p {
+            color: $color__text-inverted;
         }
     }
 }
