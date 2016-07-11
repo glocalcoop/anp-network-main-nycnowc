@@ -114,8 +114,6 @@
         height: 24px;
     }
     time.updated {
-        @include clearfix;
         @extend %visable;
-        display: block;
     }
 }
